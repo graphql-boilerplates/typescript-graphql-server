@@ -1,0 +1,3 @@
+service: graphql-boilerplate
+
+datamodel: database/datamodel.graphql
