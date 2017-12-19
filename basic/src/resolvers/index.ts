@@ -2,7 +2,7 @@ import { Query } from './Query'
 import { auth } from './Mutation/auth'
 import { post } from './Mutation/post'
 import { AuthPayload } from './AuthPayload'
-import { DateTime } from 'graphcool-binding'
+import { scalars } from 'graphcool-binding'
 
 export default {
   Query,
@@ -11,5 +11,5 @@ export default {
     ...post,
   },
   AuthPayload,
-  DateTime,
+  DateTime: scalars.DateTime,
 }
