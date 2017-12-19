@@ -1,3 +1,5 @@
 service: graphql-boilerplate
 
 datamodel: database/datamodel.graphql
+
+secret: mysecret123
