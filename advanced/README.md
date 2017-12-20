@@ -1,65 +1,70 @@
 # typescript-advanced
 
-🚀 Advanced starter code for a scalable, production-ready GraphQL server for TypeScript, including authentication and realtime functionality with GraphQL subscriptions.
+🚀 Advanced starter code for a scalable, production-ready GraphQL server written in TypeScript, including authentication and realtime functionality with GraphQL subscriptions.
 
-![](https://imgur.com/eMpNw0e.png)
+![](https://imgur.com/LG6r1q1.png)
 
 ## Features
 
-- Simple data model, easy to adjust
-- Database with powerful CRUD API (powered by [Graphcool](https://www.graph.cool/))
-- Preconfigured [`graphql-config`](https://github.com/graphcool/graphql-config)
+- **Scalable GraphQL Server:** `graphql-yoga` based on Apollo Server & Express
+- **GraphQL-native database:** Includes GraphQL database binding to Graphcool (running on MySQL)
 - Out-of-the-box support for [GraphQL Playground](https://github.com/graphcool/graphql-playground) & [Tracing](https://github.com/apollographql/apollo-tracing)
+- Simple data model – easy to adjust
+- Preconfigured [`graphql-config`](https://github.com/graphcool/graphql-config) setup
 - Authentication based on email & password
 - Realtime functionality with GraphQL subscriptions (_coming soon_)
 
+## Requirements
+
+You need to have the following things installed:
+
+* Node 8+
+* Graphcool CLI: `npm i -g graphcool@beta`
+* GraphQL CLI: `npm i -g graphql-cli`
+* GraphQL Playground desktop app (optional): [Download](https://github.com/graphcool/graphql-playground/releases)
+
 ## Getting started
 
-#### Requirements
-
-* Node 8 (or higher) & TypeScript
-* Graphcool CLI (Get it via `npm i -g graphcool@beta`)
-* GraphQL CLI (Get it via `npm i -g graphql-cli`)
-* Optional: GraphQL Playground desktop app (Download [here](https://github.com/graphcool/graphql-playground/releases))
-
-#### 1. Setting up your project
-
-##### [Option A] Via `graphql create` (recommended)
-
 ```sh
-# 1 Bootstrap GraphQL server in directory `my-app`, based on `typescript-advanced` boilerplate
-graphql create my-app -b typescript-advanced
+# Bootstrap GraphQL server in directory `my-app`, based on `typescript-advanced` boilerplate
+graphql create my-app --boilerplate typescript-advanced
 
-# 2. Navigate to the new project
+# Navigate to the new project
 cd my-app
 
-#4. Deploy the Graphcool database
-graphcool deploy
-```
-
-##### [Option B] By cloning the repo
-
-```sh
-# 1. Clone the repo and navigate into project directory
-git clone https://github.com/graphql-boilerplates/typescript-graphql-server.git
-cd typescript-graphql-server/advanced
-
-# 2. Deploy the Graphcool database
+# Deploy the Graphcool database
 graphcool deploy
 
-# 3. Install node dependencies
-yarn install
-```
-
-#### 2. Start the local server
-
-```sh
 # Start server (runs on http://localhost:4000)
 yarn start
 
 # Open Playground to explore GraphQL API
 yarn playground
 ```
+
+<details>
+
+<summary>Alternative: Clone repo</summary>
+
+```sh
+# Clone the repo and navigate into project directory
+git clone https://github.com/graphql-boilerplates/typescript-graphql-server.git
+cd typescript-graphql-server/advanced
+
+# Deploy the Graphcool database
+graphcool deploy
+
+# Install node dependencies
+yarn install
+
+# Start server (runs on http://localhost:4000)
+yarn start
+
+# Open Playground to explore GraphQL API
+yarn playground
+```
+
+</details>
 
 ## Docs
 
@@ -75,7 +80,7 @@ yarn playground
 
 #### `/` (_root directory_)
 
-- [`.env`](./.env) Contains important environment variables for development. Read more about `.env` [here](https://github.com/motdotla/dotenv)
+- [`.env`](./.env) Contains important environment variables for development. Read about how it works [here](https://github.com/motdotla/dotenv).
 - [`.graphqlconfig.yml`](./.graphqlconfig.yml) GraphQL configuration file containing the endpoints and schema configuration. Used by the [`graphql-cli`](https://github.com/graphcool/graphql-cli) and the [GraphQL Playground](https://github.com/graphcool/graphql-playground). See [`graphql-config`](https://github.com/graphcool/graphql-config) for more information.
 - [`graphcool.yml`](./graphcool.yml): The root configuration file for your database service ([documentation](https://www.graph.cool/docs/1.0/reference/graphcool.yml/overview-and-example-foatho8aip)).
 
@@ -90,7 +95,7 @@ yarn playground
 - [`src/index.ts`](src/index.ts) is the entry point of your server, pulling everything together and starting the `GraphQLServer` from [`graphql-yoga`](https://github.com/graphcool/graphql-yoga).
 - [`src/resolvers/`](src/resolvers) contains the actual business logic of your application. In GraphQL, you implement [resolver functions](http://graphql.org/learn/execution/) that *resolve* a specific query being requested.
 
-### Common Questions
+### Common questions
 
 #### I'm getting a 'Schema could not be fetched.' error after deploying, what gives?
 
