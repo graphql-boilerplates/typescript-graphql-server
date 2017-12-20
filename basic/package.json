@@ -4,12 +4,12 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "graphcool-binding": "^0.2.4",
-    "graphql-import": "^0.1.8",
-    "graphql-yoga": "^0.4.2"
+    "graphcool-binding": "0.2.4",
+    "graphql-import": "0.1.8",
+    "graphql-yoga": "0.4.2"
   },
   "devDependencies": {
-    "ts-node": "^4.0.2",
-    "typescript": "^2.6.2"
+    "ts-node": "4.0.2",
+    "typescript": "2.6.2"
   }
 }
