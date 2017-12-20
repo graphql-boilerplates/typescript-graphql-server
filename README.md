@@ -1,4 +1,4 @@
-# node-graphql-server
+# typescript-graphql-server
 
 🚀 Starter projects for GraphQL servers. This repository contains boilerplates for three different scenarios.
 
