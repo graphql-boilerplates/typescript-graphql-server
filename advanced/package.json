@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
     "dotenv-cli": "1.4.0",
-    "graphql-cli": "2.2.0",
+    "graphql-cli": "2.2.2",
     "nodemon": "1.14.3",
     "now": "8.5.4",
     "rimraf": "2.6.2",
