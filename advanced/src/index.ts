@@ -1,17 +1,14 @@
 import { GraphQLServer } from 'graphql-yoga'
-import { importSchema } from 'graphql-import'
 import { Graphcool } from 'graphcool-binding'
 import resolvers from './resolvers'
 
-const typeDefs = importSchema('./src/schema.graphql')
-
 const server = new GraphQLServer({
-  typeDefs,
+  typeDefs: './src/schema.graphql',
   resolvers,
   context: req => ({
     ...req,
     db: new Graphcool({
-      schemaPath: './database/schema.generated.graphql',
+      typeDefs: './database/schema.generated.graphql',
       endpoint: process.env.GRAPHCOOL_ENDPOINT,
       secret: process.env.GRAPHCOOL_SECRET,
     }),
