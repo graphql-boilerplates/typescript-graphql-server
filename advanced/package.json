@@ -1,8 +1,9 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "dotenv -- nodemon -x ts-node -e ts,graphql src/index.ts",
-    "debug": "dotenv -- nodemon -x 'ts-node --inspect' -e ts,graphql src/index.ts",
+    "start": "nodemon -x 'ts-node -r dotenv/config' -e ts,graphql src/index.ts",
+    "debug": "nodemon -x 'ts-node -r dotenv/config --inspect' -e ts,graphql src/index.ts",
+    "prepare": "graphql prepare",
     "playground": "graphql playground",
     "build": "rimraf dist && tsc",
     "deploy": "now --public --dotenv .env.prod && now alias && now rm --yes --safe graphql-boilerplate",
@@ -10,15 +11,14 @@
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
-    "graphcool-binding": "0.4.0",
-    "graphql-yoga": "0.7.0",
+    "graphcool-binding": "1.0.0",
+    "graphql-yoga": "0.8.0",
     "jsonwebtoken": "8.1.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
-    "dotenv-cli": "1.4.0",
-    "graphql-cli": "2.2.2",
-    "nodemon": "1.14.6",
+    "graphql-cli": "2.4.0",
+    "nodemon": "1.14.7",
     "now": "9.0.1",
     "rimraf": "2.6.2",
     "ts-node": "4.1.0",
