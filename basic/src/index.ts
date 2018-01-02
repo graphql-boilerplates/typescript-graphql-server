@@ -1,5 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga'
-import { Graphcool } from 'graphcool-binding'
+import { Graphcool } from './generated/graphcool'
 import { Context } from './utils'
 
 const resolvers = {
@@ -34,7 +34,6 @@ const server = new GraphQLServer({
   context: req => ({
     ...req,
     db: new Graphcool({
-      typeDefs: './database/schema.generated.graphql',
       endpoint: 'http://localhost:60000/graphql-boilerplate/dev',
       secret: 'mysecret123',
     }),

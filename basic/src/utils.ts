@@ -1,4 +1,4 @@
-import { Graphcool } from 'graphcool-binding'
+import { Graphcool } from './generated/graphcool'
 
 export interface Context {
   db: Graphcool

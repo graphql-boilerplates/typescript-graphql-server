@@ -1,13 +1,15 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "prepare": "graphql prepare"
   },
   "dependencies": {
-    "graphcool-binding": "0.4.0",
-    "graphql-yoga": "0.7.0"
+    "graphcool-binding": "1.0.0",
+    "graphql-yoga": "0.8.0"
   },
   "devDependencies": {
+    "graphql-cli": "^2.4.0",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
   }
