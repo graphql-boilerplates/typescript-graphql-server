@@ -4,7 +4,7 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "graphcool-binding": "0.4.0",
+    "graphcool-binding": "1.0.0",
     "graphql-yoga": "0.7.0"
   },
   "devDependencies": {
