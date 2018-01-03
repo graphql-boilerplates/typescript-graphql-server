@@ -9,7 +9,7 @@
     "graphql-yoga": "0.8.0"
   },
   "devDependencies": {
-    "graphql-cli": "^2.4.0",
+    "graphql-cli": "2.8.0",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
   }
