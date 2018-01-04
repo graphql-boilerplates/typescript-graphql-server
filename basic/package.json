@@ -6,7 +6,7 @@
     "playground": "graphql playground"
   },
   "dependencies": {
-    "graphcool-binding": "1.1.1",
+    "graphcool-binding": "1.2.0",
     "graphql-yoga": "0.8.3"
   },
   "devDependencies": {
