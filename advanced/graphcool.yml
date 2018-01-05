@@ -3,7 +3,7 @@ service: graphql-boilerplate
 
 # the cluster and stage the service is deployed to
 stage: ${env:GRAPHCOOL_STAGE}
-cluster: ${env:GRAPHCOOL_CLUSTER}
+cluster: local
 
 # to disable authentication:
 # disableAuth: true
