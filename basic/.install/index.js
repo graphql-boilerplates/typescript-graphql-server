@@ -10,7 +10,7 @@ module.exports = async ({ project }) => {
   const templateName = 'graphql-boilerplate'
 
   replaceInFiles(
-    ['src/index.js', 'package.json', 'database/graphcool.yml'],
+    ['src/index.ts', 'package.json', 'database/graphcool.yml'],
     templateName,
     project,
   )
@@ -19,7 +19,7 @@ module.exports = async ({ project }) => {
   await deploy(false)
   const info = await getInfo()
 
-  replaceInFiles(['src/index.js'], '__GRAPHCOOL_ENDPOINT__', info.httpEndpoint)
+  replaceInFiles(['src/index.ts'], '__GRAPHCOOL_ENDPOINT__', info.httpEndpoint)
 
   console.log(`\
 Next steps:
