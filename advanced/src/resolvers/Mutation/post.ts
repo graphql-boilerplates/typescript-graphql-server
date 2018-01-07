@@ -6,6 +6,8 @@ export const post = {
     return ctx.db.mutation.createPost(
       {
         data: {
+          // publish post by default
+          isPublished: true,
           title,
           text,
           author: {
