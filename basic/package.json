@@ -2,7 +2,6 @@
   "name": "graphql-boilerplate",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "prepare": "graphql prepare",
     "graphcool": "graphcool",
     "playground": "graphcool playground"
   },
