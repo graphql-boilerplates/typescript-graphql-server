@@ -1565,9 +1565,9 @@ graphcool-binding@1.3.3:
     jsonwebtoken "^8.1.0"
     subscriptions-transport-ws "0.9.4"
 
-graphcool-cli-core@1.14.5:
-  version "1.14.5"
-  resolved "https://registry.yarnpkg.com/graphcool-cli-core/-/graphcool-cli-core-1.14.5.tgz#62beea66a03737b4b8ee1dd4090b580913d00fe2"
+graphcool-cli-core@1.14.6:
+  version "1.14.6"
+  resolved "https://registry.yarnpkg.com/graphcool-cli-core/-/graphcool-cli-core-1.14.6.tgz#31e69b716cfbd51c633ed2b743f62d88cf4b4220"
   dependencies:
     archiver "^2.0.3"
     callsites "^2.0.0"
@@ -1725,12 +1725,12 @@ graphcool-yml@0.4.8:
     scuid "^1.0.2"
     yaml-ast-parser "^0.0.40"
 
-graphcool@^1.0.0-beta4.0.1:
-  version "1.0.0-beta4.0.1"
-  resolved "https://registry.yarnpkg.com/graphcool/-/graphcool-1.0.0-beta4.0.1.tgz#81d5bd9fd84928600241ad3c07bbca689ebfeecf"
+graphcool@^1.0.0-beta4.0.2:
+  version "1.0.0-beta4.0.2"
+  resolved "https://registry.yarnpkg.com/graphcool/-/graphcool-1.0.0-beta4.0.2.tgz#b25afa35962c165521543cf7609b0c873febe78a"
   dependencies:
     fs-extra "^4.0.1"
-    graphcool-cli-core "1.14.5"
+    graphcool-cli-core "1.14.6"
     graphcool-cli-engine "0.9.3"
     semver "^5.4.1"
     source-map-support "^0.4.18"
