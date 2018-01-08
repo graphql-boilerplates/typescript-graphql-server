@@ -757,7 +757,7 @@ export class Graphcool extends BaseGraphcool {
     Post: (where: PostWhereInput): Promise<boolean> => super.existsDelegate('query', 'posts', { where }, {}, '{ id }'),
     User: (where: UserWhereInput): Promise<boolean> => super.existsDelegate('query', 'users', { where }, {}, '{ id }')
   }
-  
+
   query: Query = {
     posts: (args, info): Promise<Post[]> => super.delegate('query', 'posts', args, {}, info),
     users: (args, info): Promise<User[]> => super.delegate('query', 'users', args, {}, info),

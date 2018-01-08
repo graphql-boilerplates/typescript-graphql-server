@@ -5,9 +5,8 @@
     "debug": "nodemon -x 'ts-node -r dotenv/config --inspect' -e ts,graphql src/index.ts",
     "prepare": "graphql prepare",
     "playground": "graphql playground",
-    "build": "rimraf dist && tsc",
-    "deploy": "now --public --dotenv .env.prod && now alias && now rm --yes --safe graphql-boilerplate",
-    "now-start": "node dist"
+    "graphcool": "graphcool",
+    "build": "rimraf dist && tsc"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
@@ -18,14 +17,11 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
     "dotenv": "4.0.0",
+    "graphcool": "1.0.0-alpha3.3.7",
     "graphql-cli": "2.10.0",
     "nodemon": "1.14.8",
-    "now": "9.0.1",
     "rimraf": "2.6.2",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
-  },
-  "now": {
-    "alias": "graphql-boilerplate"
   }
 }
