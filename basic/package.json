@@ -2,7 +2,6 @@
   "name": "graphql-boilerplate",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "graphcool": "graphcool",
     "playground": "graphcool playground"
   },
   "dependencies": {
@@ -10,7 +9,7 @@
     "graphql-yoga": "1.1.4"
   },
   "devDependencies": {
-    "graphcool": "1.0.0-alpha3.3.7",
+    "graphcool": "1.0.0-beta4.0.3",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
   }

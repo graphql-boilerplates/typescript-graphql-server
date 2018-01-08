@@ -3,7 +3,6 @@
   "scripts": {
     "start": "nodemon -e ts,graphql -x ts-node -r dotenv/config src/index.ts",
     "debug": "nodemon -e ts,graphql -x ts-node --inspect -r dotenv/config src/index.ts",
-    "graphcool": "graphcool",
     "playground": "graphql playground"
   },
   "dependencies": {
@@ -15,7 +14,7 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
     "dotenv": "4.0.0",
-    "graphcool": "^1.0.0-beta4.0.2",
+    "graphcool": "1.0.0-beta4.0.3",
     "graphql-cli": "2.10.0",
     "nodemon": "1.14.9",
     "ts-node": "4.1.0",
