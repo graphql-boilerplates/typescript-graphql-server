@@ -18,7 +18,7 @@
     "dotenv": "4.0.0",
     "graphcool": "1.0.0-alpha3.3.7",
     "graphql-cli": "2.10.0",
-    "nodemon": "1.14.8",
+    "nodemon": "1.14.9",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
   }
