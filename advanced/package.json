@@ -1,8 +1,8 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "nodemon -x 'ts-node -r dotenv/config' -e ts,graphql src/index.ts",
-    "debug": "nodemon -x 'ts-node -r dotenv/config --inspect' -e ts,graphql src/index.ts",
+    "start": "nodemon -e ts,graphql -x ts-node -r dotenv/config src/index.ts",
+    "debug": "nodemon -e ts,graphql -x ts-node --inspect -r dotenv/config src/index.ts",
     "graphcool": "graphcool",
     "prepare": "graphql prepare",
     "playground": "graphql playground"
