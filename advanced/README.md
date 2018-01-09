@@ -19,7 +19,6 @@
 You need to have the following things installed:
 
 * Node 8+ & TypeScript
-* Graphcool CLI: `npm i -g graphcool@beta`
 * GraphQL CLI: `npm i -g graphql-cli`
 * GraphQL Playground desktop app (optional): [Download](https://github.com/graphcool/graphql-playground/releases)
 
