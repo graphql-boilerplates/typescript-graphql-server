@@ -15,7 +15,6 @@
     "@types/bcryptjs": "2.4.1",
     "dotenv": "4.0.0",
     "graphcool": "1.0.0-beta4.0.6",
-    "graphql-cli": "2.10.0",
     "nodemon": "1.14.9",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
