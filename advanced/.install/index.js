@@ -6,7 +6,7 @@ const {
   getInfo,
 } = require('graphql-boilerplate-install')
 
-module.exports = async ({ project }) => {
+module.exports = async ({ project, projectDir }) => {
   const templateName = 'graphql-boilerplate'
 
   replaceInFiles(
@@ -19,7 +19,9 @@ module.exports = async ({ project }) => {
   await deploy(false)
 
   const info = await getInfo()
-  const cluster = info.workspace ? `${info.workspace}/${info.cluster}` : info.cluster
+  const cluster = info.workspace
+    ? `${info.workspace}/${info.cluster}`
+    : info.cluster
 
   replaceInFiles(['.env'], '__GRAPHCOOL_ENDPOINT__', info.httpEndpoint)
 
@@ -34,7 +36,7 @@ module.exports = async ({ project }) => {
 
   console.log(`\
 Next steps:
-  1. Change directory: \`cd ${project}\`
+  1. Change directory: \`cd ${projectDir}\`
   2. Start local server: \`yarn start\`
   3. Open Playground: \`yarn playground\`
 `)
