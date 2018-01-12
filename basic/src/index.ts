@@ -4,19 +4,27 @@ import { Context } from './utils'
 
 const resolvers = {
   Query: {
-    feed(parent, args, ctx: Context, info) {
+    feed(parent, args, ctx, info) {
       return ctx.db.query.posts({ where: { isPublished: true } }, info)
+    },
+    drafts(parent, args, ctx, info) {
+      return ctx.db.query.posts({ where: { isPublished: false } }, info)
+    },
+    post(parent, { id }, ctx, info) {
+      return ctx.db.query.post({ where: { id: id } }, info)
     },
   },
   Mutation: {
-    createDraft(parent, { title, text }, ctx: Context, info) {
+    createDraft(parent, { title, text }, ctx, info) {
       return ctx.db.mutation.createPost(
-        // TODO remove `isPublished` in favour of default value
         { data: { title, text, isPublished: false } },
         info,
       )
     },
-    publish(parent, { id }, ctx: Context, info) {
+    deletePost(parent, { id }, ctx, info) {
+      return ctx.db.mutation.deletePost({where: { id } }, info)
+    },
+    publish(parent, { id }, ctx, info) {
       return ctx.db.mutation.updatePost(
         {
           where: { id },
@@ -36,6 +44,7 @@ const server = new GraphQLServer({
     db: new Graphcool({
       endpoint: '__GRAPHCOOL_ENDPOINT__',
       secret: 'mysecret123',
+      debug: true,
     }),
   }),
 })
