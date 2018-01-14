@@ -3,7 +3,7 @@ const fs = require('fs')
 module.exports = ({ project }) => {
   const templateName = 'graphql-boilerplate'
   replaceInFile('package.json', templateName, project)
-  replaceInFile('graphcool.yml', templateName, project)
+  replaceInFile('prisma.yml', templateName, project)
   replaceInFile('.env', templateName, project)
   fs.appendFileSync('.gitignore', 'env*\n')
 
@@ -11,7 +11,7 @@ module.exports = ({ project }) => {
 Next steps:
 
   1. Change directory: \`cd ${project}\`
-  2. Deploy database service: \`graphcool deploy\`
+  2. Deploy database service: \`prisma deploy\`
   3. Start local server: \`yarn start\`
   4. Open Playground: \`yarn playground\`
   `)
