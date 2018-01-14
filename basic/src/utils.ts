@@ -1,6 +1,6 @@
-import { Graphcool } from 'graphcool-binding'
+import { Prisma } from 'prisma-binding'
 
 export interface Context {
-  db: Graphcool
+  db: Prisma
   request: any
 }

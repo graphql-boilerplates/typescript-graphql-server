@@ -1,6 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga'
 import { importSchema } from 'graphql-import'
-import { Graphcool } from 'graphcool-binding'
+import { Prisma } from 'prisma-binding'
 import { Context } from './utils'
 
 const typeDefs = importSchema('./src/schema.graphql')
@@ -35,7 +35,7 @@ const server = new GraphQLServer({
   resolvers,
   context: req => ({
     ...req,
-    db: new Graphcool({
+    db: new Prisma({
       schemaPath: './database/schema.generated.graphql',
       endpoint: 'http://localhost:60000/graphql-boilerplate/dev',
       secret: 'mysecret123',
