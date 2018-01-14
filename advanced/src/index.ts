@@ -3,10 +3,8 @@ import { importSchema } from 'graphql-import'
 import { Prisma } from 'prisma-binding'
 import resolvers from './resolvers'
 
-const typeDefs = importSchema('./src/schema.graphql')
-
 const server = new GraphQLServer({
-  typeDefs,
+  typeDefs: './src/schema.graphql',
   resolvers,
   context: req => ({
     ...req,
@@ -18,4 +16,4 @@ const server = new GraphQLServer({
   }),
 })
 
-server.start(() => console.log('Server is running on http://localhost:4000'))
+server.start(({ port }) => console.log(`Server is running on http://localhost:${port}`))
