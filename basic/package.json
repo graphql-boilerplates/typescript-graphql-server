@@ -2,7 +2,7 @@
   "name": "graphql-boilerplate",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "dev": "node-run-all --parallel start playground",
+    "dev": "npm-run-all --parallel start playground",
     "playground": "graphql playground"
   },
   "dependencies": {
