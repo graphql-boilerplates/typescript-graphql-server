@@ -2,6 +2,7 @@
   "name": "graphql-boilerplate",
   "scripts": {
     "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
+    "dev": "npm-run-all --parallel start playground",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
     "playground": "graphql playground",
     "build": "rimraf dist && tsc"
@@ -17,6 +18,7 @@
     "dotenv-cli": "1.4.0",
     "graphql-cli": "2.12.4",
     "nodemon": "1.14.11",
+    "npm-run-all": "^4.1.2",
     "prisma-cli": "beta",
     "rimraf": "2.6.2",
     "ts-node": "4.1.0",
