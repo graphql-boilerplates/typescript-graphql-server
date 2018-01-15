@@ -1,6 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga'
 import { importSchema } from 'graphql-import'
-import { Prisma } from 'prisma-binding'
+import { Prisma } from './generated/prisma'
 import resolvers from './resolvers'
 
 const server = new GraphQLServer({
@@ -9,11 +9,11 @@ const server = new GraphQLServer({
   context: req => ({
     ...req,
     db: new Prisma({
-      schemaPath: './database/schema.generated.graphql',
-      endpoint: process.env.PRISMA_ENDPOINT,
-      secret: process.env.PRISMA_SECRET,
+      endpoint: process.env.PRISMA_ENDPOINT, // the endpoint of the Prisma DB service (value is set in .env)
+      secret: process.env.PRISMA_SECRET, // taken from database/prisma.yml (value is set in .env)
+      debug: true, // log all GraphQL queries & mutations
     }),
   }),
 })
 
-server.start(({ port }) => console.log(`Server is running on http://localhost:${port}`))
+server.start(() => console.log(`Server is running on http://localhost:4000`))
