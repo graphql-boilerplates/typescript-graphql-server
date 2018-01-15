@@ -1,7 +1,7 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "NODE_ENV=dev ts-node src/index.ts",
     "playground": "graphql playground"
   },
   "dependencies": {
