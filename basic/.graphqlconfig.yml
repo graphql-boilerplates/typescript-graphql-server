@@ -5,15 +5,6 @@ projects:
       endpoints:
         default: http://localhost:4000
   database:
-<<<<<<< HEAD
     schemaPath: src/generated/prisma.graphql
     extensions:
       prisma: database/prisma.yml
-=======
-    schemaPath: "src/generated/graphcool.graphql"
-    extensions:
-      graphcool: database/graphcool.yml
-      prepare-binding:
-        output: src/generated/graphcool.ts
-        generator: graphcool-ts
->>>>>>> a29ada294676b5c5b1ce467555b87096439ea182

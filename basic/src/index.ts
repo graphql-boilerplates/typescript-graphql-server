@@ -1,36 +1,32 @@
 import { GraphQLServer } from 'graphql-yoga'
-<<<<<<< HEAD
 import { importSchema } from 'graphql-import'
 import { Prisma } from 'prisma-binding'
-=======
-import { Graphcool } from './generated/graphcool'
->>>>>>> a29ada294676b5c5b1ce467555b87096439ea182
 import { Context } from './utils'
 
 const resolvers = {
   Query: {
-    feed(parent, args, ctx, info) {
-      return ctx.db.query.posts({ where: { isPublished: true } }, info)
+    feed(parent, args, context: Context, info) {
+      return context.db.query.posts({ where: { isPublished: true } }, info)
     },
-    drafts(parent, args, ctx, info) {
-      return ctx.db.query.posts({ where: { isPublished: false } }, info)
+    drafts(parent, args, context: Context, info) {
+      return context.db.query.posts({ where: { isPublished: false } }, info)
     },
-    post(parent, { id }, ctx, info) {
-      return ctx.db.query.post({ where: { id: id } }, info)
+    post(parent, { id }, context: Context, info) {
+      return context.db.query.post({ where: { id: id } }, info)
     },
   },
   Mutation: {
-    createDraft(parent, { title, text }, ctx, info) {
-      return ctx.db.mutation.createPost(
+    createDraft(parent, { title, text }, context: Context, info) {
+      return context.db.mutation.createPost(
         { data: { title, text, isPublished: false } },
         info,
       )
     },
-    deletePost(parent, { id }, ctx, info) {
-      return ctx.db.mutation.deletePost({where: { id } }, info)
+    deletePost(parent, { id }, context: Context, info) {
+      return context.db.mutation.deletePost({where: { id } }, info)
     },
-    publish(parent, { id }, ctx, info) {
-      return ctx.db.mutation.updatePost(
+    publish(parent, { id }, context: Context, info) {
+      return context.db.mutation.updatePost(
         {
           where: { id },
           data: { isPublished: true },
@@ -46,15 +42,10 @@ const server = new GraphQLServer({
   resolvers,
   context: req => ({
     ...req,
-<<<<<<< HEAD
     db: new Prisma({
-      schemaPath: './database/schema.generated.graphql',
+      typeDefs: './src/generated/prisma.graphql',
       endpoint: 'http://localhost:60000/graphql-boilerplate/dev',
-=======
-    db: new Graphcool({
-      endpoint: '__GRAPHCOOL_ENDPOINT__',
->>>>>>> a29ada294676b5c5b1ce467555b87096439ea182
-      secret: 'mysecret123',
+      secret: 'mysecret123', // specified in database/prisma.yml
       debug: true,
     }),
   }),
