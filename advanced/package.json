@@ -1,8 +1,8 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "dotenv -- nodemon -x ts-node -e ts,graphql src/index.ts",
-    "debug": "dotenv -- nodemon -x 'ts-node --inspect' -e ts,graphql src/index.ts",
+    "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
+    "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
     "playground": "graphql playground",
     "build": "rimraf dist && tsc"
   },
