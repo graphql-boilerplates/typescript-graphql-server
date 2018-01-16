@@ -18,7 +18,7 @@ const resolvers = {
   Mutation: {
     createDraft(parent, { title, text }, context: Context, info) {
       return context.db.mutation.createPost(
-        { data: { title, text, isPublished: false } },
+        { data: { title, text } },
         info,
       )
     },
