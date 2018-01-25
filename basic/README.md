@@ -2,7 +2,7 @@
 
 <br />
 
-<img align="center" src="https://imgur.com/1MfnLVl.png"></img>
+<div align="center"><img src="https://imgur.com/1MfnLVl.png" /></div>
 
 <div align="center"><strong>🚀 Bootstrap your GraphQL server within seconds</strong></div>
 <div align="center">Basic starter kit for a flexible GraphQL server for TypeScript - based on best practices from the GraphQL community.</div>
