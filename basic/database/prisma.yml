@@ -1,4 +1,3 @@
-
 # the name for the service (will be part of the service's HTTP endpoint)
 service: graphql-boilerplate
 
