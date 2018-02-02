@@ -1,4 +1,3 @@
-
 # the name for the service (will be part of the service's HTTP endpoint)
 service: graphql-boilerplate
 
@@ -12,5 +11,6 @@ secret: mysecret123
 # the file path pointing to your data model
 datamodel: datamodel.graphql
 
+# seed your service with initial data based on seed.graphql
 seed:
   import: seed.graphql
