@@ -15,6 +15,8 @@
 - **Easily extensible**: A boilerplate only provides the minimum setup so you can tailor the API to your use case.
 - **Best practices**: Each boilerplate incorporates best practices from the GraphQL community.
 
+Read more about the idea behing GraphQL boilerplates [here](https://blog.graph.cool/graphql-boilerplates-graphql-create-how-to-setup-a-graphql-project-6428be2f3a5).
+
 ## Quickstart
 
 Select a boilerplate and follow the instructions in the belonging README to get started:
