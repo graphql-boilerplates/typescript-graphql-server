@@ -5,7 +5,8 @@
     "dev": "npm-run-all --parallel start playground",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
     "playground": "graphql playground",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "test": "ava"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
+    "ava": "^0.25.0",
     "dotenv-cli": "1.4.0",
     "graphql-cli": "2.13.1",
     "nodemon": "1.14.12",
