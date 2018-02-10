@@ -1,12 +1,23 @@
 import test from "ava";
 import { request, GraphQLClient } from "graphql-request";
 
-/**
-  * The user token obtained by calling login mutation
-  * @see database/seed.graphql
-  * @see src/resolvers/mutation/auth
-  */
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjamRnNGgwN3QwMDVkMDE3OW5yNDJzeTh4IiwiaWF0IjoxNTE4MTkyMzgwfQ.AsQb9P0BjWT_SOk4JSs7AYXrDr2VbRTdI3ExMItl-So"
+  /**
+    * Generate token by calling login mutation
+    * @see database/seed.graphql
+    * @see src/resolvers/mutation/auth
+    */
+  const generateToken = async () => {
+    const loginMutation = `mutation {
+      login(email: "developer@example.com", password: "nooneknows") {
+        token
+      }
+    }`
+
+    const client = new GraphQLClient('http://localhost:4000/');
+  	const { login: { token}} = await client.request(loginMutation) as { login: { token: string} }
+    return token
+  }
+
 
 // The query we are are testing
 const query = `
@@ -37,15 +48,16 @@ test('if token is invalid, it should throw an error', async t => {
 
 test("if token is valid, it should return the current user's id", async t => {
   try {
+    const token = await generateToken();
+
     const client = new GraphQLClient('http://localhost:4000/', {
       headers: {
         Authorization: 'Bearer ' + token
       }
     });
-    const actual = await client.request(query);
-    const expected = { me: { id: 'cjdg4h07t005d0179nr42sy8x' } }
+    const response = await client.request(query) as { me: { id: string }};
 
-    t.deepEqual(actual, expected)
+    t.true(!!response.me.id) // Check if id exists
   } catch (err) {
     t.fail(); // If there is an unexpected error the test should fail
   }
