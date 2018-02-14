@@ -22,13 +22,8 @@ module.exports = async ({ project, projectDir }) => {
   replaceInFiles(['src/index.ts'], '__PRISMA_ENDPOINT__', info.httpEndpoint)
 
   console.log(`\
-You can now start local server and open a GraphQL Playground by running: \`yarn dev\`
-`)
-}
-
-/*
 Next steps:
   1. Change directory: \`cd ${projectDir}\`
   2. Start local server and open Playground: \`yarn dev\`
 `)
-*/
+}
