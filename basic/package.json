@@ -16,8 +16,5 @@
     "prisma": "1.2.7",
     "ts-node": "4.1.0",
     "typescript": "2.7.2"
-  },
-  "resolutions": {
-    "graphql": "0.13.1"
   }
 }
