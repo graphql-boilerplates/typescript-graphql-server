@@ -50,8 +50,6 @@ yarn dev
 
 ### Project structure
 
-![](https://i.imgur.com/uD2fqZo.png)
-
 | File name 　　　　　　　　　　　　　　| Description 　　　　　　　　<br><br>| 
 | :--  | :--         |
 | `└── src ` (_directory_) | _Contains the source files for your GraphQL server_ |
