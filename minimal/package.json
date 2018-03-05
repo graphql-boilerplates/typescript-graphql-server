@@ -1,0 +1,23 @@
+{
+  "name": "minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "npm-run-all --parallel start playground",
+    "playground": "graphql playground"
+  },
+  "keywords": [],
+  "author": "Devan Beitel",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "1.4.3"
+  },
+  "devDependencies": {
+    "graphql-cli": "^2.15.8",
+    "npm-run-all": "4.1.2",
+    "ts-node": "^5.0.1",
+    "typescript": "2.7.2"
+  }
+}
