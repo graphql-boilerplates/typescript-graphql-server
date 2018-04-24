@@ -4,10 +4,13 @@ const {
   deploy,
   writeEnv,
   getInfo,
+  makeSandboxEndpoint
 } = require('graphql-boilerplate-install')
 
 module.exports = async ({ project, projectDir }) => {
   const templateName = 'graphql-boilerplate'
+
+  const endpoint = await makeSandboxEndpoint(project)
 
   replaceInFiles(
     ['src/index.ts', 'package.json', 'database/prisma.yml'],
@@ -15,11 +18,11 @@ module.exports = async ({ project, projectDir }) => {
     project,
   )
 
+  replaceInFiles(['src/index.ts'], '__PRISMA_ENDPOINT__', endpoint)
+  replaceInFiles(['database/prisma.yml'], '__PRISMA_ENDPOINT__', endpoint)
+
   console.log('Running $ prisma deploy...')
   await deploy(false)
-  const info = await getInfo()
-
-  replaceInFiles(['src/index.ts'], '__PRISMA_ENDPOINT__', info.httpEndpoint)
 
   console.log(`\
 Next steps:
