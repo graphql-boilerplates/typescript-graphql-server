@@ -14,7 +14,7 @@
     "graphql-cli": "2.15.14",
     "npm-run-all": "4.1.2",
     "prisma": "1.7.4",
-    "ts-node": "6.0.2",
+    "ts-node": "6.0.3",
     "typescript": "2.8.3"
   }
 }
