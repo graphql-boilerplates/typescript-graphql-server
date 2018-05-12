@@ -17,10 +17,7 @@ const resolvers = {
   },
   Mutation: {
     createDraft(parent, { title, text }, context: Context, info) {
-      return context.db.mutation.createPost(
-        { data: { title, text } },
-        info,
-      )
+      return context.db.mutation.createPost({ data: { title, text } }, info)
     },
     deletePost(parent, { id }, context: Context, info) {
       return context.db.mutation.deletePost({ where: { id } }, info)
@@ -43,10 +40,12 @@ const server = new GraphQLServer({
   context: req => ({
     ...req,
     db: new Prisma({
-      endpoint: '__PRISMA_ENDPOINT__', // the endpoint of the Prisma API
+      endpoint: 'https://eu1.prisma.sh/public-asd/as/asd', // the endpoint of the Prisma API
       debug: true, // log all GraphQL queries & mutations sent to the Prisma API
       // secret: 'mysecret123', // only needed if specified in `database/prisma.yml`
     }),
   }),
 })
-server.start(() => console.log('Server is running on http://localhost:4000'))
+server.start({ port: 4001 }, () =>
+  console.log('Server is running on http://localhost:4000'),
+)

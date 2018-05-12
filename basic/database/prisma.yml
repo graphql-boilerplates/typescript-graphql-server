@@ -1,5 +1,5 @@
 # The endpoint of your Prisma API (deployed to a Prisma Sandbox).
-endpoint: __PRISMA_ENDPOINT__
+endpoint: https://eu1.prisma.sh/public-asd/as/asd
 
 # The file containing the definition of your data model.
 datamodel: datamodel.graphql
@@ -15,8 +15,8 @@ seed:
 # with `graphql prepare` .
 hooks:
   post-deploy:
-    - graphql get-schema --project database
-    - graphql prepare
+    - graphql get-schema
+    - graphql codegen
 
 # If specified, the `secret` must be used to generate a JWT which is attached
 # to the `Authorization` header of HTTP requests made against the Prisma API.
