@@ -6,7 +6,7 @@
     "playground": "graphql playground"
   },
   "dependencies": {
-    "graphql-import": "0.5.2",
+    "graphql-import": "0.6.0",
     "graphql-yoga": "1.14.1",
     "prisma-binding": "2.0.0"
   },
