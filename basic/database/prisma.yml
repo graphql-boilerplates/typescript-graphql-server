@@ -12,7 +12,7 @@ seed:
 # `src/generated/prisma.graphql` (as specfied in `.graphqlconfig.yml`).
 # Then generate the corresponding TypeScript definitions into
 # `src/generated/prisma.ts` (also specfied in `.graphqlconfig.yml`)
-# with `graphql prepare` .
+# with `graphql codegen` .
 hooks:
   post-deploy:
     - graphql get-schema --project database
