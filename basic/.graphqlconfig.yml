@@ -8,6 +8,8 @@ projects:
     schemaPath: src/generated/prisma.graphql
     extensions:
       prisma: database/prisma.yml
-      prepare-binding:
-        output: src/generated/prisma.ts
-        generator: prisma-ts
+      codegen:
+        - generator: prisma-binding
+          language: typescript
+          output:
+            binding: src/generated/prisma.ts
