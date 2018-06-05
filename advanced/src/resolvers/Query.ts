@@ -19,7 +19,7 @@ export const Query = {
   },
 
   post(parent, { id }, ctx: Context, info) {
-    return ctx.db.query.post({ where: { id: id } }, info)
+    return ctx.db.query.post({ where: { id } }, info)
   },
 
   me(parent, args, ctx: Context, info) {
