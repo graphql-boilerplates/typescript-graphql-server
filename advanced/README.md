@@ -16,7 +16,7 @@
 - **Tooling**: Out-of-the-box support for [GraphQL Playground](https://github.com/prisma/graphql-playground) & [query performance tracing](https://github.com/apollographql/apollo-tracing)
 - **Extensible**: Simple and flexible [data model](./database/datamodel.graphql) – easy to adjust and extend
 - **No configuration overhead**: Preconfigured [`graphql-config`](https://github.com/prisma/graphql-config) setup
-- **Realtime updates**: Support for GraphQL subscriptions (_coming soon_)
+- **Realtime updates**: Support for GraphQL subscriptions
 
 Read more about the idea behind GraphQL boilerplates [here](https://blog.graph.cool/graphql-boilerplates-graphql-create-how-to-setup-a-graphql-project-6428be2f3a5).
 
