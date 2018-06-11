@@ -1089,7 +1089,7 @@ graphql-cli-prepare@1.4.19:
     graphql-static-binding "0.9.3"
     lodash "4.17.5"
 
-graphql-cli@^2.15.8:
+graphql-cli@2.15.8:
   version "2.15.8"
   resolved "https://registry.yarnpkg.com/graphql-cli/-/graphql-cli-2.15.8.tgz#09fce214b6d5f02a564601569ac2ac624ea2cb88"
   dependencies:
@@ -2615,7 +2615,7 @@ traverse-chain@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/traverse-chain/-/traverse-chain-0.1.0.tgz#61dbc2d53b69ff6091a12a168fd7d433107e40f1"
 
-ts-node@^5.0.1:
+ts-node@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-5.0.1.tgz#78e5d1cb3f704de1b641e43b76be2d4094f06f81"
   dependencies:
