@@ -12,7 +12,7 @@
   "author": "Devan Beitel",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "1.14.12"
+    "graphql-yoga": "1.15.0"
   },
   "devDependencies": {
     "graphql-cli": "2.16.5",
