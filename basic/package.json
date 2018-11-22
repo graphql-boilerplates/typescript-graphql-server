@@ -8,7 +8,7 @@
   "dependencies": {
     "graphql-import": "0.7.1",
     "graphql-yoga": "1.16.7",
-    "prisma-binding": "2.2.7"
+    "prisma-binding": "2.2.8"
   },
   "devDependencies": {
     "graphql-cli": "2.17.0",
