@@ -3,7 +3,7 @@
   "scripts": {
     "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "dev": "npm-run-all --parallel start playground",
-    "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
+    "debug": "dotenv -- nodemon -e ts,graphql -x node -r ts-node/register --inspect src/index.ts",
     "playground": "graphql playground",
     "build": "rimraf dist && tsc"
   },

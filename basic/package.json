@@ -2,6 +2,7 @@
   "name": "graphql-boilerplate",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "debug": "node -r ts-node/register --inspect src/index.ts",
     "dev": "npm-run-all --parallel start playground",
     "playground": "graphql playground"
   },
