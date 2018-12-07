@@ -1,12 +1,12 @@
 # Specifies the HTTP endpoint of your Prisma API (deployed to a Prisma Demo server).
-endpoint: __PRISMA_ENDPOINT__
+# endpoint: __PRISMA_ENDPOINT__
 
 # Defines your models, each model is mapped to the database as a table.
 datamodel: datamodel.prisma
 
 # Specifies the language and directory for the generated Prisma client.
 generate:
-  - generator: javascript-client
+  - generator: typescript-client
     output: ../src/generated/prisma-client
 
 # Seed your service with initial data based on `seed.graphql`.

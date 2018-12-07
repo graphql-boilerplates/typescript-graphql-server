@@ -60,7 +60,6 @@ yarn dev
 
 | File name 　　　　　　　　　　　　　　| Description 　　　　　　　　<br><br>|
 | :--  | :--         |
-| `├── .graphqlconfig.yml` | Configuration file based on [`graphql-config`](https://github.com/prisma/graphql-config) (e.g. used by GraphQL Playground).|
 | `└── database ` (_directory_) | _Contains all files that are related to the Prisma database service_ |\
 | `　　├── prisma.yml` | The root configuration file for your Prisma database service ([docs](https://www.prismagraphql.com/docs/reference/prisma.yml/overview-and-example-foatho8aip)) |
 | `　　└── datamodel.graphql` | Defines your data model (written in [GraphQL SDL](https://blog.graph.cool/graphql-sdl-schema-definition-language-6755bcb9ce51)) |
@@ -68,11 +67,10 @@ yarn dev
 | `　　├── index.ts` | The entry point for your GraphQL server |
 | `　　├── schema.graphql` | The **application schema** defining the API exposed to client applications  |
 | `　　└── generated` (_directory_) | _Contains generated files_ |
-| `　　　　├── prisma.ts` | The generated TypeScript bindings for the Prisma GraphQL API  |
-| `　　　　└── prisma.grapghql` | The **Prisma database schema** defining the Prisma GraphQL API  |
+| `　　　　└── prisma-client` (_directory_) | The generated Prisma client  |
 
 ## Contributing
 
-The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://dev-blog.apollodata.com) & [Graphcool](https://blog.graph.cool/) teams.
+The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://www.apollographql.com/) & [Prisma](https://www.prisma.io) teams.
 
-Your feedback is **very helpful**, please share your opinion and thoughts! If you have any questions or want to contribute yourself, join the [`#graphql-boilerplate`](https://graphcool.slack.com/messages/graphql-boilerplate) channel on our [Slack](https://graphcool.slack.com/).
+Your feedback is **very helpful**, please share your opinion and thoughts! If you have any questions or want to contribute yourself, join the `#graphql-boilerplate` channel on our [Slack](https://slack.prisma.io/).
