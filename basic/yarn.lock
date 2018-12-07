@@ -112,7 +112,6 @@
   integrity sha512-Pr+6JRiKkfsFvmU/LK68oBRCQeEg36TyAbPhc2xpez24OOZZCuoIhWGTd39VZy6nGafSbxzGouFPTFD/rR1A0A==
 
 "@types/prettier@^1.13.2":
-
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.15.2.tgz#91594ea7cb6f3b1f7ea69f32621246654c7cc231"
   integrity sha512-XIB0ZCaFZmWUHAa9dBqP5UKXXHwuukmVlP+XcyU94dui2k+l2lG+CHAbt2ffenHPUqoIs5Beh8Pdf2YEq/CZ7A==
@@ -3028,7 +3027,7 @@ prisma-cli-engine@1.22.2:
     treeify "^1.0.1"
     update-notifier "^2.3.0"
 
-prisma-client-lib@1.22.2, prisma-client-lib@^1.22.2:
+prisma-client-lib@1.22.2:
   version "1.22.2"
   resolved "https://registry.yarnpkg.com/prisma-client-lib/-/prisma-client-lib-1.22.2.tgz#e429d78f9514b79fcefe0cec1785f4dd3146530e"
   integrity sha512-jK5uM9Y91cAPBEXm7qQcBP9wJ9UlC4qXflSjTLjnUxenNXgZaqwV81plFaG8Ss+m2kbyYvjFkJBioCA8uZJf8Q==
