@@ -9,7 +9,7 @@ const typeDefs = `
 const resolvers = {
   Query: {
     hello: (_, { name }) => {
-      const returnValue = !name ? `Hello ${name || 'World!'}` : null
+      const returnValue = `Hello ${name || 'World!'}`
       return returnValue
     }
   }
