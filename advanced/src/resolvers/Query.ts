@@ -1,29 +1,29 @@
 import { getUserId, Context } from '../utils'
 
 export const Query = {
-  feed(parent, args, ctx: Context, info) {
-    return ctx.db.query.posts({ where: { isPublished: true } }, info)
+  feed(parent, args, ctx: Context) {
+    return ctx.prisma.posts({ where: { published: true } })
   },
 
-  drafts(parent, args, ctx: Context, info) {
+  drafts(parent, args, ctx: Context) {
     const id = getUserId(ctx)
 
     const where = {
-      isPublished: false,
+      published: false,
       author: {
-        id
-      }
+        id,
+      },
     }
 
-    return ctx.db.query.posts({ where }, info)
+    return ctx.prisma.posts({ where })
   },
 
-  post(parent, { id }, ctx: Context, info) {
-    return ctx.db.query.post({ where: { id } }, info)
+  post(parent, { id }, ctx: Context) {
+    return ctx.prisma.post({ id })
   },
 
-  me(parent, args, ctx: Context, info) {
+  me(parent, args, ctx: Context) {
     const id = getUserId(ctx)
-    return ctx.db.query.user({ where: { id } }, info)
+    return ctx.prisma.user({ id })
   },
 }

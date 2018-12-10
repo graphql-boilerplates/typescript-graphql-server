@@ -40,7 +40,7 @@ graphql create my-app --boilerplate typescript-advanced
 cd my-app
 
 # 4. Start server (runs on http://localhost:4000) and open GraphQL Playground
-yarn dev
+yarn start
 ```
 
 ![](https://imgur.com/hElq68i.png)
@@ -50,8 +50,6 @@ yarn dev
 ### Commands
 
 * `yarn start` starts GraphQL server on `http://localhost:4000`
-* `yarn dev` starts GraphQL server on `http://localhost:4000` _and_ opens GraphQL Playground
-* `yarn playground` opens the GraphQL Playground for the `projects` from [`.graphqlconfig.yml`](./.graphqlconfig.yml)
 * `yarn prisma <subcommand>` gives access to local version of Prisma CLI (e.g. `yarn prisma deploy`)
 
 > **Note**: We recommend that you're using `yarn dev` during development as it will give you access to the GraphQL API or your server (defined by the [application schema](./src/schema.graphql)) as well as to the Prisma API directly (defined by the [Prisma database schema](./generated/prisma.graphql)). If you're starting the server with `yarn start`, you'll only be able to access the API of the application schema.
@@ -70,12 +68,12 @@ yarn dev
 | `└── src ` (_directory_) | _Contains the source files for your GraphQL server_ |
 | `　　├── index.ts` | The entry point for your GraphQL server |
 | `　　├── schema.graphql` | The **application schema** defining the API exposed to client applications  |
+| `　　├── resolvers` (_directory_) | _Contains the implementation of the resolvers for the application schema_ |
 | `　　└── generated` (_directory_) | _Contains generated files_ |
-| `　　　　├── prisma.ts` | The generated TypeScript bindings for the Prisma GraphQL API  |
-| `　　　　└── prisma.grapghql` | The **Prisma database schema** defining the Prisma GraphQL API  |
+| `　　　　└── prisma-client` (_directory_) | The generated Prisma client |
 
 ## Contributing
 
-The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://dev-blog.apollodata.com) & [Graphcool](https://blog.graph.cool/) teams.
+The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://www.apollographql.com/) & [Prisma](https://www.prisma.io) teams.
 
-Your feedback is **very helpful**, please share your opinion and thoughts! If you have any questions or want to contribute yourself, join the [`#graphql-boilerplate`](https://graphcool.slack.com/messages/graphql-boilerplate) channel on our [Slack](https://graphcool.slack.com/).
+Your feedback is **very helpful**, please share your opinion and thoughts! If you have any questions or want to contribute yourself, join the `#graphql-boilerplate` channel on our [Slack](https://slack.prisma.io/).

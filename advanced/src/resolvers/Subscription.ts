@@ -2,17 +2,15 @@ import { Context } from '../utils'
 
 export const Subscription = {
   feedSubscription: {
-    subscribe: (parent, args, ctx: Context, info) => {
-      return ctx.db.subscription.post(
-        {
-          where: {
-            node: {
-              isPublished: true,
-            },
-          },
-        },
-        info,
-      )
+    subscribe: async (parent, args, ctx: Context) => {
+      return ctx.prisma.$subscribe
+        .post({
+          mutation_in: ['CREATED', 'UPDATED'],
+        })
+        .node()
+    },
+    resolve: payload => {
+      return payload
     },
   },
 }
