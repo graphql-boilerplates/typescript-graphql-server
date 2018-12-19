@@ -4,7 +4,7 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "graphql-yoga": "1.16.8",
+    "graphql-yoga": "1.16.9",
     "prisma-client-lib": "1.23.1"
   },
   "devDependencies": {
