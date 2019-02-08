@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
-    "@types/node": "10.12.21",
+    "@types/node": "10.12.23",
     "dotenv-cli": "1.4.0",
     "nodemon": "1.18.9",
     "prisma": "1.26.3",
