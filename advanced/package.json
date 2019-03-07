@@ -15,7 +15,7 @@
     "@types/node": "10.12.30",
     "dotenv-cli": "1.4.0",
     "nodemon": "1.18.10",
-    "prisma": "1.28.0",
+    "prisma": "1.28.1",
     "rimraf": "2.6.3",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
