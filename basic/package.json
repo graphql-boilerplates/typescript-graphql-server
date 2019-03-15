@@ -8,7 +8,7 @@
     "prisma-client-lib": "1.28.5"
   },
   "devDependencies": {
-    "prisma": "1.28.4",
+    "prisma": "1.28.5",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
   }
