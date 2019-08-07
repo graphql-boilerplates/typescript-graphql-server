@@ -32,14 +32,16 @@ npm install -g graphql-cli
 
 ```sh
 # 1. Bootstrap GraphQL server in directory `my-app`, based on `typescript-advanced` boilerplate
-graphql create my-app --boilerplate typescript-advanced
+graphql create my-app
 
-# 2. When prompted, deploy the Prisma service to a _public cluster_
+# 2. When prompted, select typescript-advanced
 
-# 3. Navigate to the new project
+# 3. When prompted, deploy the Prisma service to a _public cluster_
+
+# 4. Navigate to the new project
 cd my-app
 
-# 4. Start server (runs on http://localhost:4000) and open GraphQL Playground
+# 5. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn start
 ```
 
