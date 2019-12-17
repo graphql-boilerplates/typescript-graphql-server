@@ -123,9 +123,9 @@
   version "10.12.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.12.tgz#e15a9d034d9210f00320ef718a50c4a799417c47"
 
-"@types/node@10.17.10":
-  version "10.17.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.10.tgz#929a0064c4fb99af3ec0ca981649e4d049de2b72"
+"@types/node@10.17.11":
+  version "10.17.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.11.tgz#46ba035fb917b31c948280dbea22ab8838f386a4"
 
 "@types/prettier@^1.13.2":
   version "1.15.2"
