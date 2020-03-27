@@ -1,0 +1,24 @@
+schema: ./src/schema/**/*.graphql
+extensions:
+  # Graphback configuration
+  graphback:
+    ##  Input schema
+    model: ./model
+    ## Global configuration for CRUD generator
+    crud:
+      create: true
+      update: true
+      findAll: true
+      find: true
+      delete: true
+      subCreate: true
+      subUpdate: true
+      subDelete: true
+    ## Codegen plugins
+    plugins:
+        graphback-schema:
+          format: 'graphql'
+          outputPath: ./src/schema
+        graphback-resolvers:
+          format: ts
+          outputPath: ./src/resolvers

@@ -1,38 +1,44 @@
-import { GraphQLServer } from 'graphql-yoga'
-import { prisma } from './generated/prisma-client'
-import { Context } from './utils'
+import { ApolloServer, PubSub } from 'apollo-server-express';
+import { createServer } from 'http';
+import { createKnexCRUDRuntimeServices, CRUDService } from '@graphback/runtime-knex'
+import express from 'express';
+import Knex from 'knex';
+import resolvers from './generated/resolvers';
+import { models } from './generated/models';
+import { getProjectConfig } from './utils';
 
-const resolvers = {
-  Query: {
-    feed(parent, args, context: Context) {
-      return context.prisma.posts({ where: { published: true } })
-    },
-    drafts(parent, args, context: Context) {
-      return context.prisma.posts({ where: { published: false } })
-    },
-    post(parent, { id }, context: Context) {
-      return context.prisma.post({ id })
-    },
-  },
-  Mutation: {
-    createDraft(parent, { title, content }, context: Context) {
-      return context.prisma.createPost({ title, content })
-    },
-    deletePost(parent, { id }, context: Context) {
-      return context.prisma.deletePost({ id })
-    },
-    publish(parent, { id }, context: Context) {
-      return context.prisma.updatePost({
-        where: { id },
-        data: { published: true },
-      })
-    },
-  },
+async function start() {
+  const app = express()
+
+  const projectConfig = await getProjectConfig()
+  const schema = await projectConfig.getSchema()
+  const typeDefs = await projectConfig.getSchema('DocumentNode')
+
+  const db = Knex({
+    client: 'sqlite3',
+    connection: {
+      filename: './db.sqlite'
+    }
+  })
+
+  const pubSub = new PubSub()
+
+  const context = createKnexCRUDRuntimeServices(models, schema, db, pubSub)
+
+  const apolloServer = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context
+  })
+
+  apolloServer.applyMiddleware({ app, path: '/' });
+
+  const httpServer = createServer(app)
+
+  httpServer.listen(
+    { port: 4000 },
+    () => console.log(`Server is running on http://localhost:4000/`)
+  )
 }
 
-const server = new GraphQLServer({
-  typeDefs: './src/schema.graphql',
-  resolvers,
-  context: { prisma },
-})
-server.start(() => console.log('Server is running on http://localhost:4000'))
+start()

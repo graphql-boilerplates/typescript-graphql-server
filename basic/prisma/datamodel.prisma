@@ -1,6 +1,0 @@
-type Post {
-  id: ID! @id
-  published: Boolean! @default(value: false)
-  title: String!
-  content: String!
-}

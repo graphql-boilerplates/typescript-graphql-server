@@ -3,6 +3,7 @@
     "target": "es5",
     "moduleResolution": "node",
     "module": "commonjs",
+    "esModuleInterop": true,
     "sourceMap": true,
     "rootDir": "src",
     "outDir": "dist",

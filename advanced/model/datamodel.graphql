@@ -1,0 +1,27 @@
+scalar DateTime
+
+"""
+@model
+"""
+type Post {
+  id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  published: Boolean!
+  title: String!
+  content: String!
+}
+
+"""
+@model
+"""
+type User {
+  id: ID!
+  email: String!
+  password: String!
+  name: String!
+  """
+  @oneToMany field: 'author'
+  """
+  posts: [Post!]!
+}

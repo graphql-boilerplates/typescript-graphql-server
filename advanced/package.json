@@ -3,20 +3,27 @@
   "scripts": {
     "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "generate": "graphback generate"
   },
   "dependencies": {
+    "@graphback/runtime-mongo": "0.11.2",
+    "apollo-server-express": "2.11.0",
     "bcryptjs": "2.4.3",
-    "graphql-yoga": "1.18.3",
-    "jsonwebtoken": "8.5.1"
+    "graphql": "14.6.0",
+    "graphql-config": "3.0.0-alpha.23",
+    "graphql-iso-date": "^3.6.1",
+    "jsonwebtoken": "8.5.1",
+    "mongodb": "3.5.5"
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
     "@types/node": "10.17.18",
     "dotenv-cli": "1.4.0",
+    "graphback-cli": "0.11.4",
     "nodemon": "1.19.4",
-    "prisma": "1.34.10",
     "rimraf": "2.7.1",
+    "schemats": "3.0.3",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
   }

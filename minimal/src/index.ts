@@ -1,4 +1,6 @@
-import { GraphQLServer } from 'graphql-yoga'
+import { ApolloServer } from 'apollo-server-express';
+import { createServer } from 'http';
+import express from 'express';
 
 const typeDefs = `
   type Query {
@@ -15,9 +17,18 @@ const resolvers = {
   }
 }
 
-const server = new GraphQLServer({
+const app = express()
+
+const apolloServer = new ApolloServer({
   typeDefs,
   resolvers
 })
 
-server.start(() => console.log('Server is running on http://localhost:4000'))
+apolloServer.applyMiddleware({ app, path: '/' });
+
+const httpServer = createServer(app)
+
+httpServer.listen(
+  { port: 4000 },
+  () => console.log(`Server is running on http://localhost:4000/`)
+)
