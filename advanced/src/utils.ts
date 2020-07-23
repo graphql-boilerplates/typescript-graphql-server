@@ -1,8 +1,8 @@
 import * as jwt from 'jsonwebtoken'
-import { Prisma } from './generated/prisma-client'
+import { loadConfig } from 'graphql-config'
+import { MongoClient } from 'mongodb'
 
 export interface Context {
-  prisma: Prisma
   request: any
 }
 
@@ -15,6 +15,24 @@ export function getUserId(ctx: Context) {
   }
 
   throw new AuthError()
+}
+
+export async function connectDB(databaseName: string) {
+  const client = new MongoClient(process.env.MONGODB_CONNECTION_URL, { useUnifiedTopology: true })
+  await client.connect();
+
+  return client.db(databaseName)
+}
+
+export async function getProjectConfig() {
+  const projectConfig = await loadConfig({
+    rootDir: process.cwd(),
+    extensions: [
+      () => ({ name: 'graphback' })
+    ]
+  });
+
+  return projectConfig.getDefault();
 }
 
 export class AuthError extends Error {

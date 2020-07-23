@@ -1,14 +1,18 @@
 {
   "name": "graphql-boilerplate",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "generate": "graphback generate"
   },
   "dependencies": {
-    "graphql-yoga": "1.18.3",
-    "prisma-client-lib": "1.34.10"
+    "@graphback/runtime-knex": "0.11.3",
+    "apollo-server-express": "2.11.0",
+    "graphql-config": "3.0.0-alpha.23",
+    "knex": "0.20.13"
   },
   "devDependencies": {
-    "prisma": "1.34.10",
+    "graphback-cli": "0.11.4",
+    "graphql": "14.6.0",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
   }

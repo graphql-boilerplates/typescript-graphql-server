@@ -1,5 +1,12 @@
-import { Prisma } from './generated/prisma-client'
+import { loadConfig } from 'graphql-config'
 
-export interface Context {
-  prisma: Prisma
+export async function getProjectConfig() {
+  const projectConfig = await loadConfig({
+    rootDir: process.cwd(),
+    extensions: [
+      () => ({ name: 'graphback' })
+    ]
+  });
+
+  return projectConfig.getDefault();
 }

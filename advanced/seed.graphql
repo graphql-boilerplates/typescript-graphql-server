@@ -1,0 +1,36 @@
+# Write your query or mutation here
+mutation {
+  user1: createUser(input: {
+    email: "example1@graphback.dev"
+    name: "Alan"
+    password: "$2b$10$dqyYw5XovLjpmkYNiRDEWuwKaRAvLaG45fnXE5b3KTccKZcRPka2m" # "secret42"
+  }) {
+    id
+  }
+  
+  user1Post: createPost(input: {
+        title: "Graphback - the evolution of the GraphQL ecosystem"
+        content: "https://graphback.dev/blog/2019/08/21/introduction"
+        published: true
+  }) {
+    title
+    content
+  }
+
+  user2: createUser(input: {
+    email: "example2@graphback.dev"
+    name: "Siobhan"
+    password: "$2b$10$o6KioO.taArzboM44Ig85O3ZFZYZpR3XD7mI8T29eP4znU/.xyJbW"  # "secret43"
+  }) {
+    id
+  }
+  
+  user2Post: createPost(input: {
+        title: "Graphback - Low Code, GraphQL based API suited for your needs"
+        content: "https://graphback.dev/blog/2020/02/06/graphback-plugins"
+        published: true
+  }) {
+    title
+    content
+  }
+}

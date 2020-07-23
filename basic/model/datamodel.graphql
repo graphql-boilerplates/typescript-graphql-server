@@ -1,0 +1,19 @@
+"""
+@model
+"""
+type Post {
+  id: ID
+  published: Boolean!
+  title: String!
+  content: String!
+}
+
+type Query {
+  feed: String
+  drafts: Post
+}
+
+type Mutation {
+  createDraft(title: String, content: String): Post
+  publish(id: ID!): Post
+}
