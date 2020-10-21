@@ -123,10 +123,10 @@
   version "10.12.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.12.tgz#e15a9d034d9210f00320ef718a50c4a799417c47"
 
-"@types/node@10.17.41":
-  version "10.17.41"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.41.tgz#379c595efe23038f7bb635a727894f5ecc632a20"
-  integrity sha512-nKJyZS0+HGPXNAKPh2egQbsXHZvDbeQEb7JT667+4cTO6n+VSZ9kl9AqL0XxRhL9YP4HWfw/EGTA9ajOWMzL3A==
+"@types/node@10.17.42":
+  version "10.17.42"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.42.tgz#90dd71b26fe4f4e2929df6b07e72ef2e9648a173"
+  integrity sha512-HElxYF7C/MSkuvlaHB2c+82zhXiuO49Cq056Dol8AQuTph7oJtduo2n6J8rFa+YhJyNgQ/Lm20ZaxqD0vxU0+Q==
 
 "@types/prettier@^1.13.2":
   version "1.15.2"
