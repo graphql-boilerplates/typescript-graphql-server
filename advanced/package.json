@@ -18,6 +18,6 @@
     "prisma": "1.34.12",
     "rimraf": "2.7.1",
     "ts-node": "7.0.1",
-    "typescript": "3.9.7"
+    "typescript": "3.9.8"
   }
 }
