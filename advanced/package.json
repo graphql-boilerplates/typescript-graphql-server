@@ -17,7 +17,7 @@
     "nodemon": "1.19.4",
     "prisma": "1.34.12",
     "rimraf": "2.7.1",
-    "ts-node": "7.0.1",
+    "ts-node": "9.1.1",
     "typescript": "3.9.9"
   }
 }
