@@ -11,7 +11,7 @@
     "jsonwebtoken": "8.5.1"
   },
   "devDependencies": {
-    "@types/bcryptjs": "2.4.2",
+    "@types/bcryptjs": "2.4.4",
     "@types/node": "10.17.60",
     "dotenv-cli": "1.4.0",
     "nodemon": "1.19.4",
