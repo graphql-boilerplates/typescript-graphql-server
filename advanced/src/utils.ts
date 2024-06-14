@@ -1,9 +1,10 @@
 import * as jwt from 'jsonwebtoken'
 import { Prisma } from './generated/prisma-client'
+import { Request } from "express";
 
 export interface Context {
   prisma: Prisma
-  request: any
+  request: Request
 }
 
 export function getUserId(ctx: Context) {
