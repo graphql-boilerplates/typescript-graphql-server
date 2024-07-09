@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "graphql-cli": "2.17.0",
-    "npm-run-all2": "5.0.0",
+    "npm-run-all2": "5.0.2",
     "ts-node": "6.2.0",
     "typescript": "3.9.10"
   }
